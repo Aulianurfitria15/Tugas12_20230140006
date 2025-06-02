@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Pendaftaran Fun Run</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100 min-h-screen flex items-center justify-center p-5">
+
+  <div class="bg-white rounded-2xl shadow-xl p-8 w-full max-w-2xl space-y-6">
+    <h1 class="text-3xl font-bold text-center text-purple-600">🏃‍♀️ Pendaftaran Fun Run 2025</h1>
+
+    <form id="formRun" class="space-y-4">
+      <div>
+        <label class="block font-semibold text-purple-700">Nama Lengkap</label>
+        <input type="text" id="nama" class="w-full p-3 rounded-lg border border-purple-300" placeholder="Nama kamu...">
+      </div>
+
+      <div>
+        <label class="block font-semibold text-purple-700">Email</label>
+        <input type="email" id="email" class="w-full p-3 rounded-lg border border-purple-300" placeholder="email@example.com">
+      </div>
+
+      <div>
+        <label class="block font-semibold text-purple-700">No. WhatsApp</label>
+        <input type="tel" id="wa" class="w-full p-3 rounded-lg border border-purple-300" placeholder="08xxxxxxxxxx">
+      </div>
+
+      <div>
+        <label class="block font-semibold text-purple-700">Jenis Kelamin</label>
+        <div class="flex gap-4 mt-1">
+          <label><input type="radio" name="gender" value="Perempuan" class="mr-1"> Perempuan</label>
+          <label><input type="radio" name="gender" value="Laki-laki" class="mr-1"> Laki-laki</label>
+        </div>
+      </div>
+
+      <div>
+        <label class="block font-semibold text-purple-700">Kategori Lomba</label>
+        <select id="kategori" class="w-full p-3 rounded-lg border border-purple-300">
+          <option value="3K">3K - Fun Walk</option>
+          <option value="5K">5K - Fun Run</option>
+          <option value="10K">10K - Challenge Run</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-semibold text-purple-700">Ukuran Baju</label>
+        <select id="ukuran" class="w-full p-3 rounded-lg border border-purple-300">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-semibold text-purple-700">Tanggal Event</label>
+        <input type="date" id="tanggal" class="w-full p-3 rounded-lg border border-purple-300">
+      </div>
+
+      <div>
+        <label class="inline-flex items-center">
+          <input type="checkbox" id="setuju" class="mr-2"> Saya setuju dengan syarat & ketentuan
+        </label>
+      </div>
+
+      <button type="button" onclick="submitForm()" class="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 rounded-xl transition">Daftar Sekarang</button>
+    </form>
+
+    <div id="output" class="bg-purple-50 border border-purple-200 p-4 rounded-lg text-purple-700 mt-6 text-sm hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
