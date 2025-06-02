@@ -17,7 +17,7 @@ function submitForm() {
   }
 
   if (!nama || !email || !wa || !gender || !tanggal || !setuju) {
-    alert('⚠️ Harap lengkapi semua data dan setujui syarat & ketentuan.');
+    alert('⚠️ Harap lengkapi semua data dengan benar!');
     return;
   }
 
